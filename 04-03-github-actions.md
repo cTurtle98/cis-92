@@ -52,5 +52,5 @@ jobs:
 
 run the docker from the github repo
 ```
-docker run -it --rm -p 8080:8080 ghcr.io/cturtle98/cis-92:main
+docker run -i --rm -p 8080:80 ghcr.io/cturtle98/cis-92:main
 ```
