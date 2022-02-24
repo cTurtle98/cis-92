@@ -2,11 +2,11 @@ FROM docker.io/ubuntu:20.04
 
 # apt stuff
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt update -y && apt install -y python3-pip tzdata
+RUN apt update -y && apt install -y python3-pip tzdata postgresql-client
 
 # pip stuff
 RUN alias python=python3
-RUN python3 -m pip install django 
+RUN python3 -m pip install django psycopg2-binary
 
 # copy source code
 COPY app/ /app
