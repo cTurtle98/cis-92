@@ -5,6 +5,7 @@ docker run command
 ```
 docker run \
 -d -t \
+--name django \
 -p 8000:8000 \
 -e DJANGO_ADMIN_EMAIL=admin@example.com \
 -e DJANGO_ADMIN_USERNAME=admin \
