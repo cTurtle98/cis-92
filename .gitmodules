@@ -1,0 +1,3 @@
+[submodule  "docs"]
+    path = docs
+    url = git@github.com/cturtle98/cis-92.wiki.git
