@@ -15,6 +15,11 @@ RUN chmod +x entrypoint.sh
 
 EXPOSE 8000
 
+ENV DB_NAME=""
+ENV DB_USER=""
+ENV DB_PASSWORD = ""
+ENV DB_HOST=""
+
 # start django server
 ENTRYPOINT ["bash"]
 CMD ["-c", "./entrypoint.sh"]
