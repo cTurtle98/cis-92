@@ -23,8 +23,9 @@ ENV DB_USER="django"
 ENV DB_PASSWORD = "BadPassword"
 ENV DB_HOST="postgres"
 
-# user data in volume
+# data in volume
 ENV BASE_DIR="/var/db"
+RUN mkdir /var/db
 VOLUME /var/db
 
 # start django server
