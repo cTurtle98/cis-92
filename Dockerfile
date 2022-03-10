@@ -15,6 +15,7 @@ RUN chmod +x entrypoint.sh
 
 EXPOSE 8000
 
+# database setup
 # postgres or sqlite
 ENV DB_ENGINE="sqlite"
 # if postgres below needs to be set
@@ -23,10 +24,14 @@ ENV DB_USER="django"
 ENV DB_PASSWORD = "BadPassword"
 ENV DB_HOST="postgres"
 
-# data in volume
+# database storage
 ENV BASE_DIR="/var/db"
 RUN mkdir /var/db
 VOLUME /var/db
+
+# django credentials
+ENV DJANGO_ADMIN_EMAIL="admin@example.com"
+ENV DJANGO_ADMIN_USERNAME="admin"
 
 # start django server
 ENTRYPOINT ["bash"]
