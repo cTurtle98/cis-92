@@ -23,6 +23,10 @@ ENV DB_USER="django"
 ENV DB_PASSWORD = "BadPassword"
 ENV DB_HOST="postgres"
 
+# user data in volume
+ENV BASE_DIR="/var/db"
+VOLUME /var/db
+
 # start django server
 ENTRYPOINT ["bash"]
 CMD ["-c", "./entrypoint.sh"]
