@@ -7,8 +7,13 @@ metadata:
 spec:
   containers:
   - name: mysite
-    image: ghcr.io/cTurtle98/cis-92:main
+    image: ghcr.io/cturtle98/cis-92:main
     imagePullPolicy: Always
+    resources:
+      limits:
+        cpu: 250m 
+        memory: 512Mi
+        ephemeral-storage: 10Mi
     ports:
     - containerPort: 8000
     env:
@@ -20,3 +25,4 @@ spec:
       value: "test"
     - name: DJANGO_SUPERUSER_PASSWORD
       value: "test"
+      
