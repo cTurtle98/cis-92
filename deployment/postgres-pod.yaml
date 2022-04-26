@@ -1,29 +1,32 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysite
+  name: postgres
   labels:
-    app: mysite
-  
+    app: postgres
 spec:
+  volumes:
+  - name: postgres
+    persistentVolumeClaim:
+        claimName: postgres
   containers:
   - name: postgres
     image: docker.io/postgres:14.2
     imagePullPolicy: Always
     volumeMounts:
-    - name: postgres-pvc
+    - name: postgres
       mountPath: /var/lib/postgresql/data
     resources:
       limits:
         cpu: 250m 
         memory: 512Mi
         ephemeral-storage: 10Mi
-      env:
-      - name: POSTGRES_DB
-        value: "mysitedb"
-        
-      - name: POSTGRES_USER
-        value: "mysiteuser"
+    env:
+    - name: POSTGRES_DB
+      value: "mysitedb"
+      
+    - name: POSTGRES_USER
+      value: "mysiteuser"
 
-      - name: POSTGRES_PASSWORD
-        value: "mysitepassword"
+    - name: POSTGRES_PASSWORD
+      value: "mysitepassword"
