@@ -15,7 +15,7 @@ spec:
     imagePullPolicy: Always
     volumeMounts:
     - name: postgres
-      mountPath: /var/lib/postgresql/data
+      mountPath: /var/lib/postgresql
     resources:
       limits:
         cpu: 250m 
