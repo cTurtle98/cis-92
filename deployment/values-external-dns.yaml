@@ -6,14 +6,14 @@ serviceAccount:
   create: true
   name: external-dns
   annotations:
-    iam.gke.io/gcp-service-account: sa-edns@MY-PROJECT-ID-HERE.iam.gserviceaccount.com
+    iam.gke.io/gcp-service-account: sa-edns@cis-92-spring-2022-ciaran.iam.gserviceaccount.com
 
 sources:
   - service
   - ingress
 
 domainFilters:
-  - MYDOMAIN.HERE.
+  - ciaran.cis-92.net.
 
 txtOwnerId: "kubernetes-app"
 
