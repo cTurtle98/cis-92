@@ -1,9 +1,9 @@
 # Configuration for postgres
 auth:
   rootPassword: test
-  database: django 
-  username: test
-  password: test
+  database: mysitedb 
+  username: mysiteuser
+  password: mysitepassword
 
 # GKE Autopilot requires requests and limits.
 primary:
