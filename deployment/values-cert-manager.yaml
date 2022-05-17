@@ -7,7 +7,7 @@ serviceAccount:
   create: true 
   name: cert-manager
   annotations:     
-    iam.gke.io/gcp-service-account: sa-edns@YOUR-PROJECT-ID.iam.gserviceaccount.com
+    iam.gke.io/gcp-service-account: sa-edns@cis-92-spring-2022-ciaran.iam.gserviceaccount.com
 
 global:
   leaderElection:
