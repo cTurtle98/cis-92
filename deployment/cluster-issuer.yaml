@@ -4,11 +4,11 @@ metadata:
   name: letsencrypt
 spec:
   acme:
-    email: you@you.com
+    email: school@ciaranfarley.info
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: letsencrypt-account-key
     solvers:
     - dns01:
         cloudDNS:
-          project: YOUR-PROJECT-ID
+          project: cis-92-spring-2022-ciaran
