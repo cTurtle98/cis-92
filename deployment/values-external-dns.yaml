@@ -13,7 +13,7 @@ sources:
   - ingress
 
 domainFilters:
-  - ciaran.cis-92.net.
+  - www.ciaran.cis-92.net.
 
 txtOwnerId: "kubernetes-app"
 
