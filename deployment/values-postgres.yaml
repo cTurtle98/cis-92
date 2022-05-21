@@ -1,3 +1,6 @@
+
+# cant get the helm chart to work. dont use me
+
 # Configuration for postgres
 auth:
   rootPassword: test

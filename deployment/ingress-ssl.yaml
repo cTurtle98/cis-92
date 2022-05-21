@@ -1,0 +1,26 @@
+
+# this file is broken dont use me
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cis-92-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  tls: 
+  - hosts:
+    - www.ciaran.cis-92.net
+    secretName: apps-cert-secret
+  rules:
+  - host: "www.ciaran.cis.92.net"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mysite
+            port:
+              number: 80
