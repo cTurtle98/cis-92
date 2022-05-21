@@ -5,7 +5,7 @@ metadata:
   annotations: {}
 spec:
   rules:
-  - host: "www.ciaran.cis-92.net"
+  - host: "ciaran.cis-92.net"
     http:
       paths:
       - path: /

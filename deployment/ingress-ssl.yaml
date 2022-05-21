@@ -11,10 +11,10 @@ metadata:
 spec:
   tls: 
   - hosts:
-    - www.ciaran.cis-92.net
+    - ciaran.cis-92.net
     secretName: apps-cert-secret
   rules:
-  - host: "www.ciaran.cis.92.net"
+  - host: "ciaran.cis.92.net"
     http:
       paths:
       - path: /
